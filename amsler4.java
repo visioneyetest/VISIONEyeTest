@@ -19,12 +19,12 @@ public class amsler4 extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.amsler4);
        
-        Button b1 = (Button) findViewById(R.id.button1);
+        Button stop = (Button) findViewById(R.id.button1);
         
        
         
         // -- register click event with second button ---
-        b1.setOnClickListener(new View.OnClickListener() {
+        stop.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
                // --- find the text view --
                //TextView txtView = (TextView) findViewById(R.id.textView1);

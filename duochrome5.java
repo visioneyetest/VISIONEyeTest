@@ -18,11 +18,11 @@ public class duochrome5 extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.duochrome5);
        
-        Button b1 = (Button) findViewById(R.id.button1);
-        Button b2 = (Button) findViewById(R.id.button2);
+        Button next = (Button) findViewById(R.id.button1);
+        Button stop = (Button) findViewById(R.id.button2);
         
         // -- register click event with first button ---
-        b1.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
                // --- find the text view --
                //TextView txtView = (TextView) findViewById(R.id.textView1);
@@ -34,7 +34,7 @@ public class duochrome5 extends Activity
         });
         
         // -- register click event with second button ---
-        b2.setOnClickListener(new View.OnClickListener() {
+        stop.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
                // --- find the text view --
                //TextView txtView = (TextView) findViewById(R.id.textView1);

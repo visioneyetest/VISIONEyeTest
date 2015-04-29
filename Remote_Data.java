@@ -248,7 +248,7 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
     		   String edu=p_edu.toString().replaceAll("\\s+","_");
     		   String pass= p_pass.toString().replaceAll("\\s+","_");
 
-    			strLink = "http://192.168.0.65/visionPHP/registration.php?name="+name+"&add="+add+"&con="+con+"&edu="+edu+"&pass="+pass;
+    			strLink = "http://192.168.0.75/visionPHP/registration.php?name="+name+"&add="+add+"&con="+con+"&edu="+edu+"&pass="+pass;
         	    
         		url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -264,7 +264,7 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         		   String inc=n_inch.toString().replaceAll("\\s+","_");
         		   String pass= n_pass.toString().replaceAll("\\s+","_");
 
-        		strLink = "http://192.168.0.65/visionPHP/ngoreg.php?ngoname="+name+"&ngoadd="+add+"&ngocon="+con+"&ngoincharge="+inc+"&ngopass="+pass;
+        		strLink = "http://192.168.0.75/visionPHP/ngoreg.php?ngoname="+name+"&ngoadd="+add+"&ngocon="+con+"&ngoincharge="+inc+"&ngopass="+pass;
             	    
             		url = new URL(strLink);
             		client = new DefaultHttpClient();
@@ -282,7 +282,7 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         		   String edu=d_edu.toString().replaceAll("\\s+","_");
         		   String pass=d_pass.toString().replaceAll("\\s+","_");
         		   int id=d_id;
-        		  	strLink = "http://192.168.0.65/visionPHP/update.php?name="+name+"&add="+add+"&con="+con+"&edu="+edu+"&pass="+pass+"&id="+id;
+        		  	strLink = "http://192.168.0.75/visionPHP/update.php?name="+name+"&add="+add+"&con="+con+"&edu="+edu+"&pass="+pass+"&id="+id;
             	    
             		url = new URL(strLink);
             		client = new DefaultHttpClient();
@@ -298,7 +298,7 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
     		   String inch=n_inch.toString().replaceAll("\\s+","_");
     		   String pass=n_pass.toString().replaceAll("\\s+","_");
     		   int id=n_id;
-    		  strLink = "http://192.168.0.65/visionPHP/ngoupdate.php?ngoname="+name+"&ngoadd="+add+"&ngocon="+con+"&ngoinch="+inch+"&ngopass="+pass+"&id="+id;
+    		  strLink = "http://192.168.0.75/visionPHP/ngoupdate.php?ngoname="+name+"&ngoadd="+add+"&ngocon="+con+"&ngoinch="+inch+"&ngopass="+pass+"&id="+id;
         	
     		   url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -316,8 +316,8 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         		//1st col    
         	
 
-        		strLink = "http://192.168.0.65/visionPHP/getid.php?name="+strName1+"&contact="+con;
-        		//strLink = "http://192.168.0.65/table.php?name=md&contact=8888888888";
+        		strLink = "http://192.168.0.75/visionPHP/getid.php?name="+strName1+"&contact="+con;
+        		//strLink = "http://192.168.0.75/table.php?name=md&contact=8888888888";
             	 
         		url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -334,8 +334,8 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         		//1st col    
         	
         		
-        		strLink = "http://192.168.0.65/visionPHP/ngoid.php?ngoname="+strName1+"&ngocon="+con;
-        		//strLink = "http://192.168.0.65/table.php?name=md&contact=8888888888";
+        		strLink = "http://192.168.0.75/visionPHP/ngoid.php?ngoname="+strName1+"&ngocon="+con;
+        		//strLink = "http://192.168.0.75/table.php?name=md&contact=8888888888";
             	 
         		url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -359,9 +359,9 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         		String dates1=dates.toString().replaceAll("\\s+","+");
         	   
         		
-            	//strLink="http://192.168.0.65/order.php?order_id=1&table_id=2&order_itid=4&order_item=dg&order_price=78&order_quantity=58&order_ototal=45&order_tips=hgfh&order_status=Pending";
+            	//strLink="http://192.168.0.75/order.php?order_id=1&table_id=2&order_itid=4&order_item=dg&order_price=78&order_quantity=58&order_ototal=45&order_tips=hgfh&order_status=Pending";
         		
-            	strLink="http://192.168.0.65/visionPHP/feedback.php?p_name="+p_name1+"&p_add="+p_add1+"&p_con="+p_con1+"&c_name="+c_name1+"&c_con="+c_con1+"&feed="+feed1+"&dates="+dates1;
+            	strLink="http://192.168.0.75/visionPHP/feedback.php?p_name="+p_name1+"&p_add="+p_add1+"&p_con="+p_con1+"&c_name="+c_name1+"&c_con="+c_con1+"&feed="+feed1+"&dates="+dates1;
         		//or=""+O_ITEMS1+O_OITID1+O_OTOTAL1+O_OID1+O_TID1+O_PRICE1+O_QTY1+O_STATUS1;
             	
         		url = new URL(strLink);
@@ -375,7 +375,7 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         	}
         	else if(a=="selectdrinfo")
         	{
-        		strLink = "http://192.168.0.65/visionPHP/selectdrinfo.php";
+        		strLink = "http://192.168.0.75/visionPHP/selectdrinfo.php";
         		//strLink = "http://192.168.4.131/selectall.php";
         		url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -386,7 +386,7 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         	}
         	else if(a=="selectngoinfo")
         	{
-        		strLink = "http://192.168.0.65/visionPHP/selectngoinfo.php";
+        		strLink = "http://192.168.0.75/visionPHP/selectngoinfo.php";
         		//strLink = "http://192.168.4.131/selectall.php";
         		url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -402,8 +402,8 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         		//1st col    
         	
 
-        		strLink = "http://192.168.0.65/visionPHP/login.php?uid="+uid+"&upass="+upass;
-        		//strLink = "http://192.168.0.65/table.php?name=md&contact=8888888888";
+        		strLink = "http://192.168.0.75/visionPHP/login.php?uid="+uid+"&upass="+upass;
+        		//strLink = "http://192.168.0.75/table.php?name=md&contact=8888888888";
             	 
         		url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -420,8 +420,8 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         		//1st col    
         	
 
-        		strLink = "http://192.168.0.65/visionPHP/ngologin.php?uid="+uid+"&upass="+upass;
-        		//strLink = "http://192.168.0.65/table.php?name=md&contact=8888888888";
+        		strLink = "http://192.168.0.75/visionPHP/ngologin.php?uid="+uid+"&upass="+upass;
+        		//strLink = "http://192.168.0.75/table.php?name=md&contact=8888888888";
             	 
         		url = new URL(strLink);
         		client = new DefaultHttpClient();
@@ -437,9 +437,9 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         	{
         		
         	   
-            	//strLink="http://192.168.0.65/order.php?order_id=1&table_id=2&order_itid=4&order_item=dg&order_price=78&order_quantity=58&order_ototal=45&order_tips=hgfh&order_status=Pending";
+            	//strLink="http://192.168.0.75/order.php?order_id=1&table_id=2&order_itid=4&order_item=dg&order_price=78&order_quantity=58&order_ototal=45&order_tips=hgfh&order_status=Pending";
         		
-            	strLink="http://192.168.0.65/visionPHP/displaydrinfo.php?id="+disid;
+            	strLink="http://192.168.0.75/visionPHP/displaydrinfo.php?id="+disid;
         		//or=""+O_ITEMS1+O_OITID1+O_OTOTAL1+O_OID1+O_TID1+O_PRICE1+O_QTY1+O_STATUS1;
             	
             			url = new URL(strLink);
@@ -455,9 +455,9 @@ public Remote_Data(Context context,String n_name,String n_add,String n_con,Strin
         	{
         		
         	   
-            	//strLink="http://192.168.0.65/order.php?order_id=1&table_id=2&order_itid=4&order_item=dg&order_price=78&order_quantity=58&order_ototal=45&order_tips=hgfh&order_status=Pending";
+            	//strLink="http://192.168.0.75/order.php?order_id=1&table_id=2&order_itid=4&order_item=dg&order_price=78&order_quantity=58&order_ototal=45&order_tips=hgfh&order_status=Pending";
         		
-            	strLink="http://192.168.0.65/visionPHP/displayngoinfo.php?id="+disnid;
+            	strLink="http://192.168.0.75/visionPHP/displayngoinfo.php?id="+disnid;
         		//or=""+O_ITEMS1+O_OITID1+O_OTOTAL1+O_OID1+O_TID1+O_PRICE1+O_QTY1+O_STATUS1;
             	
             			url = new URL(strLink);

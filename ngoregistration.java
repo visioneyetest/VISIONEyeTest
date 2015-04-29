@@ -38,8 +38,10 @@ etxAdd=(EditText)findViewById(R.id.editText2);
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generatinch method stub
-				String ngoinfo="";
-				int n=1;
+				if(etxName.length()>0 && etxAdd.length()>0 && etxContact.length()>=10 && etxinchu.length()>0 && etxPass.length()>0==true)
+					
+					{	String ngoinfo="";
+						int n=1;
 							
 					
 						uname=etxName.getText().toString().replaceAll("\\s+","_");
@@ -62,7 +64,12 @@ etxAdd=(EditText)findViewById(R.id.editText2);
 							int doctorid=Remote_Data.nid;
 							finish();	
 						}
-					
+			else
+				{
+				Toast.makeText(ngoregistration.this, "Please Fill all the details",Toast.LENGTH_SHORT).show();
+				
+				}
+			}
 		});
 		
 		

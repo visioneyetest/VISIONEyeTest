@@ -19,10 +19,10 @@ public class visual14 extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.visual14);
        
-        Button b1 = (Button) findViewById(R.id.button1);
+        Button stop = (Button) findViewById(R.id.button1);
        
         
-        b1.setOnClickListener(new View.OnClickListener() {
+        stop.setOnClickListener(new View.OnClickListener() {
            public void onClick(View v) {
                // --- find the text view --
                //TextView txtView = (TextView) findViewById(R.id.textView1);

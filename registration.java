@@ -44,7 +44,9 @@ etxAdd=(EditText)findViewById(R.id.editText2);
 				String selectdrinfo="";
 				
 		
-			uname=etxName.getText().toString().replaceAll("\\s+","_");
+				if(etxName.length()>0 && etxAdd.length()>0 && etxContact.length()>=10 && etxEdu.length()>0 && etxPass.length()>0 ==true)
+				{
+				uname=etxName.getText().toString().replaceAll("\\s+","_");
 				contact=etxContact.getText().toString().replaceAll("\\s+","_");
 				
 				String addr=etxAdd.getText().toString().replaceAll("\\s+","_");
@@ -66,6 +68,13 @@ etxAdd=(EditText)findViewById(R.id.editText2);
 				Toast.makeText(registration.this, "Your Id"+Remote_Data.did,Toast.LENGTH_SHORT).show();
 			  	   finish();
 			}
+				else
+				{
+					Toast.makeText(registration.this, "Please Fill all the details",Toast.LENGTH_SHORT).show();
+					
+				}
+			}
+			
 		});
 		
 

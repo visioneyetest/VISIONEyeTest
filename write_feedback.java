@@ -18,10 +18,12 @@ import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class write_feedback extends Activity {
 Button submit,disp;
+TextView tid;
 EditText  id,pname1,add1,con1,cname1,ccon1,feed1,dates1;
 String pname,add,con,cname,ccon,feed,dates;	
 	@Override
@@ -36,16 +38,15 @@ String pname,add,con,cname,ccon,feed,dates;
 		 ccon1 = (EditText) findViewById(R.id.editText6);
 		 feed1 = (EditText) findViewById(R.id.editText7);
 		 dates1 = (EditText) findViewById(R.id.editText8);
+		 tid= (TextView) findViewById(R.id.textView1);
 		 
 		submit=(Button)findViewById(R.id.button1);
 		disp=(Button)findViewById(R.id.button2);
 		
-		 submit.setOnClickListener(new View.OnClickListener() {
-			 
+		 submit.setOnClickListener(new View.OnClickListener() {		 
 			 
 	            @Override
-	            public void onClick(View arg0) {
-	               
+	            public void onClick(View arg0) {	               
 	            	  String pname = pname1.getText().toString();
 		                String add = add1.getText().toString();
 		                String con = con1.getText().toString();
@@ -53,10 +54,9 @@ String pname,add,con,cname,ccon,feed,dates;
 		                String ccon = ccon1.getText().toString();
 		                String feed = feed1.getText().toString();
 		                String dates = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-		    			 //dates1.setText(dates.toString());
+		    			 //dates1.setText(dates.toString());		               
 		               
-		               
-	                if (pname.trim().length() > 0) {
+	                if (pname.trim().length() > 0 && add.trim().length()>0 && con.trim().length()>=10 && cname.trim().length()>0 && ccon.trim().length()>=10 && feed.trim().length()>0 && dates.trim().length()>0) {
 	                    DatabaseHandler db = new DatabaseHandler(getApplicationContext());
 	                    db.insertUser(pname,add,con,cname,ccon,feed,dates.toString());
 	                   // db.de();
@@ -85,7 +85,7 @@ String pname,add,con,cname,ccon,feed,dates;
 	                } 
 	                else 
 	                {
-	                    Toast.makeText(getApplicationContext(), "Please enter name",
+	                    Toast.makeText(getApplicationContext(), "Please enter all data",
 	                            Toast.LENGTH_SHORT).show();
 	                }
 	 
@@ -118,7 +118,7 @@ String pname,add,con,cname,ccon,feed,dates;
 							"con1" + c.getString(3) +"\n" +"cname1" + c.getString(4) +"\n" +"ccon1" + c.getString(5) + "\n"+"feed1 " + c.getString(6)+ "\n"+"date " + c.getString(7),
 							Toast.LENGTH_LONG).show();
 					
-					 id.setText(c.getString(0));
+					tid.setText(c.getString(0));
 					  pname1.setText(c.getString(1));
 	                   add1.setText(c.getString(2));
 	                   con1.setText(c.getString(3));
